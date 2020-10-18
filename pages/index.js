@@ -8,8 +8,6 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 const Home = () => {
   const { data, error } = useSWR('/api/get-promo', fetcher)
 
-  console.log('passou no index', data)
-
   return (
     <div>
       <PageTitle title='Seja bem vindo' />
